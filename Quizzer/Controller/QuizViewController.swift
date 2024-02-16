@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class QuizViewController: UIViewController {
     
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var questionLabel: UILabel!
@@ -19,6 +19,11 @@ class ViewController: UIViewController {
     var audioPlayer: AVAudioPlayer?
     
     var quiz = Quiz()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        showNextQuestion()
+    }
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         
@@ -41,20 +46,14 @@ class ViewController: UIViewController {
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        showNextQuestion()
-    }
-    
     func showNextQuestion() {
         
         view.backgroundColor = UIColor.systemBlue
         
         if quiz.quizComplete() {
-            trueButton.isHidden = true
-            falseButton.isHidden = true
-            questionLabel.text = "Quiz Complete!\nYou answered \(quiz.score) correctly"
-            progressBar.progress = 1
+//            let completeView = QuizCompleteViewController()
+//            self.present(completeView, animated: true, completion: nil)
+            
         }
         else {
             quiz.nextQuestion()
