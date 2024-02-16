@@ -51,9 +51,8 @@ class QuizViewController: UIViewController {
         view.backgroundColor = UIColor.systemBlue
         
         if quiz.quizComplete() {
-//            let completeView = QuizCompleteViewController()
-//            self.present(completeView, animated: true, completion: nil)
             
+            self.performSegue(withIdentifier: "goToResultView", sender: self)
         }
         else {
             quiz.nextQuestion()
@@ -70,5 +69,13 @@ class QuizViewController: UIViewController {
         audioPlayer!.play()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResultView" {
+            let destinationViewController = segue.destination as! ResultViewController
+            
+            destinationViewController.score = quiz.score
+            
+        }
+    }
 }
 

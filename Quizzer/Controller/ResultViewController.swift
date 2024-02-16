@@ -9,13 +9,15 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-
-    @IBOutlet weak var resultLabel: UILabel!
+    
+    var score: Int = 0
+    
+    @IBOutlet weak var scoreLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewCont
+        scoreLabel.text = "\(score)"
     }
     
 
