@@ -11,13 +11,17 @@ import UIKit
 class ResultViewController: UIViewController {
     
     var score: Int = 0
+    var totalQuestions: Int = 0
+    
     
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var totalQuestionsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         scoreLabel.text = "\(score)"
+        totalQuestionsLabel.text = "out of \(totalQuestions) questions"
     }
     
 

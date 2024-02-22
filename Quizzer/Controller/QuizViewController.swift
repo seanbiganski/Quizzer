@@ -51,7 +51,6 @@ class QuizViewController: UIViewController {
         view.backgroundColor = UIColor.systemBlue
         
         if quiz.quizComplete() {
-            
             self.performSegue(withIdentifier: "goToResultView", sender: self)
         }
         else {
@@ -74,7 +73,7 @@ class QuizViewController: UIViewController {
             let destinationViewController = segue.destination as! ResultViewController
             
             destinationViewController.score = quiz.score
-            
+            destinationViewController.totalQuestions = quiz.questions.count
         }
     }
 }

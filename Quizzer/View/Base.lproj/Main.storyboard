@@ -97,46 +97,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kg-O6-hHO">
-                                <rect key="frame" x="165" y="404.5" width="84" height="77"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz Complete!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSQ-5g-4SQ">
-                                <rect key="frame" x="78" y="297" width="258" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBF-50-Ch1">
-                                <rect key="frame" x="105.5" y="344.5" width="203" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="equalCentering" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DAR-bU-WZH">
+                                <rect key="frame" x="87.5" y="324.5" width="239" height="237"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz Complete!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSQ-5g-4SQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="239" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBF-50-Ch1">
+                                        <rect key="frame" x="18" y="64.5" width="203" height="50.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kg-O6-hHO" userLabel="NumberCorrect">
+                                        <rect key="frame" x="77.5" y="120" width="84" height="76.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="out of 99 questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frF-bd-rTt" userLabel="TotalQuestionsLabel">
+                                        <rect key="frame" x="45.5" y="216.5" width="148.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ew4-9a-f5M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hSQ-5g-4SQ" firstAttribute="leading" secondItem="ew4-9a-f5M" secondAttribute="leading" constant="78" id="4k3-UK-odP"/>
-                            <constraint firstItem="2kg-O6-hHO" firstAttribute="centerX" secondItem="9QL-wi-Y3l" secondAttribute="centerX" id="6nk-0I-TiX"/>
-                            <constraint firstItem="hSQ-5g-4SQ" firstAttribute="centerX" secondItem="9QL-wi-Y3l" secondAttribute="centerX" id="Fnb-Uk-2iL"/>
-                            <constraint firstItem="2kg-O6-hHO" firstAttribute="centerY" secondItem="9QL-wi-Y3l" secondAttribute="centerY" id="HoC-Zg-waj"/>
-                            <constraint firstItem="YBF-50-Ch1" firstAttribute="centerX" secondItem="9QL-wi-Y3l" secondAttribute="centerX" id="VnD-JU-IJS"/>
-                            <constraint firstItem="2kg-O6-hHO" firstAttribute="top" secondItem="hSQ-5g-4SQ" secondAttribute="bottom" constant="57.5" id="byf-kZ-t4K"/>
-                            <constraint firstItem="2kg-O6-hHO" firstAttribute="top" secondItem="YBF-50-Ch1" secondAttribute="bottom" constant="10" id="iot-2U-ZF0"/>
-                            <constraint firstItem="hSQ-5g-4SQ" firstAttribute="top" secondItem="ew4-9a-f5M" secondAttribute="top" constant="297" id="wUT-94-XBj"/>
+                            <constraint firstItem="DAR-bU-WZH" firstAttribute="centerX" secondItem="9QL-wi-Y3l" secondAttribute="centerX" id="f6U-Ek-gia"/>
+                            <constraint firstItem="DAR-bU-WZH" firstAttribute="centerY" secondItem="9QL-wi-Y3l" secondAttribute="centerY" id="pjO-fh-i0h"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rU1-82-0zp"/>
                     <connections>
-                        <outlet property="scoreLabel" destination="2kg-O6-hHO" id="0Tu-03-fFw"/>
+                        <outlet property="scoreLabel" destination="2kg-O6-hHO" id="GpH-R5-lKx"/>
+                        <outlet property="totalQuestionsLabel" destination="frF-bd-rTt" id="iom-If-Dyi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1sa-bh-fMD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="851" y="135"/>
+            <point key="canvasLocation" x="997" y="135"/>
         </scene>
     </scenes>
     <resources>
